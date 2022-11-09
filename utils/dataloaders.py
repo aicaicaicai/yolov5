@@ -494,10 +494,8 @@ class LoadImagesAndLabels(Dataset):
             else:
                 cps += aps[i]
         subpath = cps[1:]
-        # cache_path = Path('/kaggle/working/yolov5/data/cache').joinpath(
-        #     subpath).with_suffix('.cache')
-        cache_path = Path('/kaggle/working/yolov5/data/cache').joinpath(subpath)
-        cache_path = Path(str(cache_path)+".cache")
+        cache_path = Path('/kaggle/working/yolov5/data/cache').joinpath(
+            subpath).with_suffix('.cache')
         del aps, bps, cps, subpath
         ###
 
