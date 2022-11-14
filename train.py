@@ -24,7 +24,7 @@ import time
 from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
-import wandb
+# import wandb
 
 import numpy as np
 import torch
@@ -336,7 +336,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                     return
             # end batch ------------------------------------------------------------------------------------------------
 
-        wandb.log({"loss": mloss})
+        # wandb.log({"loss": mloss})
 
         # Scheduler
         lr = [x['lr'] for x in optimizer.param_groups]  # for loggers
